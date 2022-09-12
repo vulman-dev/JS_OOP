@@ -1,7 +1,6 @@
 export const getMutualFriends = (user1, user2) => {
-    const firstUserFriends = user1.getFriends();
-    const secondUserFriends = user2.getFriends();
-  
-    return firstUserFriends.filter((friend) =>
-      secondUserFriends.some((fr) => fr.id === friend.id));
+    const friends1 = user1.getFriends();
+    const friends2 = user2.getFriends();
+    const friends2Ids = friends2.map(({ id }) => id);
+    return friends1.filter(({ id }) => friends2Ids.includes(id));
   };
