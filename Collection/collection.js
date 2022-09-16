@@ -9,4 +9,8 @@ const objects = [
 
 const each = (objectCollection, callbackFunction) => objectCollection.forEach((object) => callbackFunction.call(object));
 
-console.log(each(objects, callback));
+each(objects, function callback() {
+    this.name = this.name.split('').reverse().join('');
+});
+
+console.log(objects);
