@@ -6,11 +6,9 @@ function getEndPoint() {
     return this.endPoint;
 }
 
-function Segment(beginPoint, endPoint) {
+export default function Segment(beginPoint, endPoint) {
     this.beginPoint = beginPoint;
     this.endPoint = endPoint;
     this.getBeginPoint = getBeginPoint;
     this.getEndPoint = getEndPoint;
 }
-
-export default Segment;

@@ -6,11 +6,9 @@ function getY() {
     return this.y;
 }
 
-function Point(x, y) {
+export default function Point(x, y) {
     this.x = x;
     this.y = y;
     this.getX = getX;
     this.getY = getY;
-}
-
-export default Point;
+};
